@@ -20,13 +20,13 @@ color_flip.addEventListener('click', e => {color_flip.style.color = 'green'
 e.stopPropagation()
 });
 
-const img_flip = document.querySelector('img-fluid')
-img_flip.addEventListener('click', () => {console.log('success');
-Tweenmax.to(img_flip, 1, {rotation:45})
+const img_flip = document.querySelector('.img-fluid')
+img_flip.addEventListener('mouseover', () => {console.log('success')
+TweenMax.to(img_flip, 4, {ease:Bounce.easeOut, delay:2});
 });
 
 const nav_color = document.querySelectorAll('.p')
 nav_color.addEventListener('mouseup', () =>{console.log('good');
-    nav_color.textContent = 'poop';
+    nav_color[0].target.textContent = 'poop';
 });
 
